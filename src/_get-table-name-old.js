@@ -8,14 +8,13 @@
  * - fallback to `data` table defined the current .arc
  * - final fallback to begin-data-production-data or begin-data-staging-data
  */
+// question: where do I get this?
 let parse = require('@architect/parser')
-let join = require('path').join
-let fs = require('fs')
-let read = p=> fs.readFileSync(p).toString()
-let exists = fs.existsSync
+import {join} from "https://deno.land/std/path/mod.ts";
+import {readFileStrSync as read, existsSync as exists}from "https://deno.land/std/fs/mod.ts";
 let table = false // cache between invocations
 
-module.exports = function getTableName() {
+function getTableName() {
 
   if (table)
     return table
@@ -71,3 +70,5 @@ module.exports = function getTableName() {
 
   return table
 }
+
+export default getTableName;

@@ -1,8 +1,6 @@
 import * as fs from "https://deno.land/std/fs/mod.ts";
 import * as path from "https://deno.land/std/path/mod.ts";
 
-// let fs = require('fs')
-// let path = require('path')
 // question: where can I find this in deno?
 // let parse = require('@architect/parser')
 

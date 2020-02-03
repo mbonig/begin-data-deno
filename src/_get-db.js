@@ -17,4 +17,5 @@ if (testing) {
   })
 }
 
-module.exports = testing? new DB({endpoint}) : new DB
+const db = testing? new DB({endpoint}) : new DB
+export default db;
